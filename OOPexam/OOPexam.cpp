@@ -1,12 +1,15 @@
 // OOPexam.cpp : 
 #include "Main.h" // main header
+#include "RMR.h"
 
 int main()
 {
-    Main m;
-    m.CoutGroups();
-    m.CoutVotes();
-    m.CounterVotes();
+    Source s;
+    s.CoutGroups();
+    s.CoutVotes();
+
+    RMR h;
+    h.WhoWin();
 }
 
 

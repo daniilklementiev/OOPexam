@@ -18,9 +18,15 @@
     <ClCompile Include="OOPexam.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RMR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RMR.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
