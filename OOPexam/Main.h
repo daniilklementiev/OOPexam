@@ -6,13 +6,32 @@
 #define GROUPS 5
 
 class Main {
-private:
-	std::string candidates[COUNT];
-	char votes[COUNT][GROUPS] = { 'a', 'b', 'c', 'd', 'e', 'a', 'b', 'c', 'd', 'e', 'a', 'b', 'c', 'd', 'e', 'a', 'b', 'c', 'd', 'e' };
-	int votesC[COUNT] = { 0 };
 public:
+	char cand[COUNT] = { 'a', 'b', 'c', 'd' };	// candidates
+	char votes[COUNT][GROUPS] = {			// 4 person in group 4 votes in 5 groups
+		cand[0], 
+		cand[1], 
+		cand[2], 
+		cand[3], 
+		cand[0], 
+		cand[1], 
+		cand[2], 
+		cand[3], 
+		cand[0], 
+		cand[1], 
+		cand[2], 
+		cand[3], 
+		cand[0], 
+		cand[1], 
+		cand[2], 
+		cand[3],  
+		cand[0], 
+		cand[1], 
+		cand[2], 
+		cand[3] 
+	};
+	int votesC[COUNT] = { 0 }; // for each group counter
 	int groups[GROUPS] = { 1, 2, 3, 4, 5 };
-	
 
 	void CoutGroups() {
 		for (size_t i = 0; i < GROUPS; i++)
@@ -36,9 +55,9 @@ public:
 	}
 
 	void CounterVotes() {
-		for (size_t i = 0; i < GROUPS; i++)
+		for (size_t i = 0; i < COUNT; i++)
 		{
-			for (size_t j = 0; j < COUNT; j++)
+			for (size_t j = 0; j < GROUPS; j++)
 			{
 				if (votes[i][j] == 'a')
 				{
@@ -58,10 +77,10 @@ public:
 				}
 			}
 		}
-		std::cout << "\n\n\n\n";
+		std::cout << "\n";
 		for (size_t i = 0; i < COUNT; i++)
 		{
-			std::cout << "Group " << i + 1 << "  votes:" << votesC[i] << std::endl;
+			std::cout << "Candidate " << cand[i] << "  votes:" << votesC[i] << std::endl;
 		}
 	}
 };
